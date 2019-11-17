@@ -6,14 +6,18 @@ import Typography from '../components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
 
 
-
+//Imagen de fondo (no se porque oscurece los colores :S)
 const backgroundImage =
-  'http://misimagenesde.com/wp-content/uploads/2017/05/color-rosa-1.jpg';
+//'/images/imagenPrincipal1.PNG';
+ 'https://ar.images.search.yahoo.com/search/images;_ylt=AwrJ3s9sENFdY1gAEIut9Qt.?fr=mcafee&ei=UTF-8&p=daniel+wellington&fr2=sp-qrw-corr-top&norw=1#id=510&iurl=https%3A%2F%2Fs-media-cache-ak0.pinimg.com%2F736x%2F59%2F88%2F5f%2F59885f80994279fdeaec6fc090d71e5a.jpg&action=click';
+ // 'https://www.instagram.com/p/B4cVan2CF0G/?igshid=q5n1nezmzvph';
+ //'http://misimagenesde.com/wp-content/uploads/2017/05/color-rosa-1.jpg';
+
 
 const styles = theme => ({
   background: {
     backgroundImage: `url(${backgroundImage})`,
-    backgroundColor: '#cce5e2', // Average color of the background image.
+   // backgroundColor: '#cce5e2', // Average color of the background image.
     backgroundPosition: 'center',
   },
   button: {
@@ -41,9 +45,9 @@ function ProductHero(props) {
       <Typography color="inherit" align="center" variant="h2" marked="center">
         Cualquier cosa en tu tiempo
       </Typography>
-      <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
+      {/*<Typography color="inherit" align="center" variant="h5" className={classes.h5}>
         Cualquier cosa en tu tiempo.
-      </Typography>
+        </Typography>*/}
       <Button
         color="secondary"
         variant="contained"
