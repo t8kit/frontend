@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Button from '../components/Button';
+//import Button from '../components/Button';
 import Typography from '../components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
 
@@ -9,9 +9,11 @@ import ProductHeroLayout from './ProductHeroLayout';
 //Imagen de fondo (no se porque oscurece los colores :S)
 const backgroundImage =
 //'/images/imagenPrincipal1.PNG';
+//'https://t2.pb.ltmcdn.com/es/posts/9/9/0/relajacion_guiada_para_adolescentes_99_0_orig.jpg';
+'https://instagram.faep8-1.fna.fbcdn.net/vp/4bae70be0540bd2dc184e46c4a20a6da/5E897C7D/t51.2885-15/e35/p1080x1080/72119047_151108586149546_7031359667364854727_n.jpg?_nc_ht=instagram.faep8-1.fna.fbcdn.net&_nc_cat=110';
 // 'https://ar.images.search.yahoo.com/search/images;_ylt=AwrJ3s9sENFdY1gAEIut9Qt.?fr=mcafee&ei=UTF-8&p=daniel+wellington&fr2=sp-qrw-corr-top&norw=1#id=510&iurl=https%3A%2F%2Fs-media-cache-ak0.pinimg.com%2F736x%2F59%2F88%2F5f%2F59885f80994279fdeaec6fc090d71e5a.jpg&action=click';
- // 'https://www.instagram.com/p/B4cVan2CF0G/?igshid=q5n1nezmzvph';
- 'http://misimagenesde.com/wp-content/uploads/2017/05/color-rosa-1.jpg';
+// 'https://www.instagram.com/p/B4cVan2CF0G/?igshid=q5n1nezmzvph';
+// 'http://misimagenesde.com/wp-content/uploads/2017/05/color-rosa-1.jpg';
 
 
 const styles = theme => ({
@@ -20,9 +22,9 @@ const styles = theme => ({
    // backgroundColor: '#cce5e2', // Average color of the background image.
     backgroundPosition: 'center',
   },
-  button: {
-    minWidth: 200,
-  },
+  //button: {
+  //  minWidth: 200,
+  //},
   h5: {
     marginBottom: theme.spacing(4),
     marginTop: theme.spacing(4),
@@ -43,11 +45,25 @@ function ProductHero(props) {
       {/* Increase the network loading priority of the background image. */}
       <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
       <Typography color="inherit" align="center" variant="h2" marked="center">
-        Cualquier cosa en tu tiempo
+        Solo en tu tiempo
       </Typography>
       {/*<Typography color="inherit" align="center" variant="h5" className={classes.h5}>
         Cualquier cosa en tu tiempo.
         </Typography>*/}
+    {/*  <Button
+        color="secondary"
+        variant="contained"
+        size="large"
+        className={classes.button}
+        component="a"
+        href="/premium-themes/onepirate/sign-up/"
+      >
+        Supemercado
+      </Button>
+      <Typography variant="body2" color="inherit" className={classes.more}>
+        Discover the experience
+      </Typography>
+
       <Button
         color="secondary"
         variant="contained"
@@ -56,11 +72,28 @@ function ProductHero(props) {
         component="a"
         href="/premium-themes/onepirate/sign-up/"
       >
-        Register
+        Farmacia
       </Button>
+
       <Typography variant="body2" color="inherit" className={classes.more}>
         Discover the experience
       </Typography>
+
+      <Button
+        color="secondary"
+        variant="contained"
+        size="large"
+        className={classes.button}
+        component="a"
+        href="/premium-themes/onepirate/sign-up/"
+      >
+        Comida
+      </Button>
+
+      <Typography variant="body2" color="inherit" className={classes.more}>
+        Discover the experience
+      </Typography>
+    */}
     </ProductHeroLayout>
   );
 }

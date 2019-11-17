@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+//import logoT from './images/th.jpg';
 
 const styles = theme => ({
   root: {
@@ -29,7 +30,7 @@ const styles = theme => ({
     right: 0,
     top: 0,
     bottom: 0,
-    backgroundColor: theme.palette.common.black,
+    backgroundColor: theme.palette.common.white,
     opacity: 0.5,
     zIndex: -1,
   },
@@ -55,12 +56,7 @@ function ProductHeroLayout(props) {
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
-        <img
-          src="/images/th.png"
-          alt="wonder"
-          width="147"
-          height="80"
-        />
+
         {children}
         <div className={classes.backdrop} />
         <div className={clsx(classes.background, backgroundClassName)} />
