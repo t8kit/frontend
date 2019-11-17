@@ -8,7 +8,7 @@ import ProductHeroLayout from './ProductHeroLayout';
 
 
 const backgroundImage =
-  '';
+  'http://misimagenesde.com/wp-content/uploads/2017/05/color-rosa-1.jpg';
 
 const styles = theme => ({
   background: {
@@ -39,10 +39,10 @@ function ProductHero(props) {
       {/* Increase the network loading priority of the background image. */}
       <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
       <Typography color="inherit" align="center" variant="h2" marked="center">
-        Upgrade your Sundays
+        Cualquier cosa en tu tiempo
       </Typography>
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
-        Enjoy secret offers up to -70% off the best luxury hotels every Sunday.
+        Cualquier cosa en tu tiempo.
       </Typography>
       <Button
         color="secondary"
