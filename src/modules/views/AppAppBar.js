@@ -5,6 +5,10 @@ import { withStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
+//
+//import { BrowserRouter as Router, Route } from 'react-router-dom'
+
+
 
 const styles = theme => ({
   title: {
@@ -48,7 +52,7 @@ function AppAppBar(props) {
             underline="none"
             color="inherit"
             className={classes.title}
-            href="/premium-themes/onepirate/"
+            href="/"
           >
             {'T8KIT'}
           </Link>
@@ -58,7 +62,7 @@ function AppAppBar(props) {
               variant="h6"
               underline="none"
               className={classes.rightLink}
-              href="/premium-themes/onepirate/sign-in/"
+              href="/SignIn"
             >
               {'Ingresar'}
             </Link>
@@ -66,7 +70,7 @@ function AppAppBar(props) {
               variant="h6"
               underline="none"
               className={clsx(classes.rightLink, classes.linkSecondary)}
-              href="/src/signUp"
+              href="/SignUp"
              
             >
               {'Registrate'}
@@ -79,8 +83,16 @@ function AppAppBar(props) {
   );
 }
 
+//AppAppBar.propTypes = {
+//  classes: PropTypes.object.isRequired,
+//;
 AppAppBar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
+//class AppAppBar extends Component {
+//  static propTypes ={
+//children:  PropTypes.object.isRequired
+
+ 
 
 export default withStyles(styles)(AppAppBar);
