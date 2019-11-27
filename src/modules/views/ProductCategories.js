@@ -4,6 +4,13 @@ import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '../components/Typography';
+//import { Link } from 'react-router-dom';
+
+
+//import clsx from 'clsx';
+import Link from '@material-ui/core/Link';
+
+
 
 const styles = theme => ({
   root: {
@@ -86,25 +93,32 @@ const styles = theme => ({
 function ProductCategories(props) {
   const { classes } = props;
 
-  const images = [
+
+  const images1 = [
     {
       url:
         'https://www.hola.com/imagenes/salud/2017062795512/caidas-ancianos-y-tecnologia/0-457-64/caida-ancianos1-t.jpg',
       title: 'Farmacia',
       width: '25%',
-    },
+    }
+  ];
+    const images2 = [
     {
       url:
         'http://blog.sistemahiper.com.br/wp-content/uploads/2016/07/x-dicas-para-seu-supermercado-atrair-mais-clientes28167.jpg',
       title: 'Supermercado',
       width: '25%',
-    },
+    }
+  ];
+    const images3 = [
     {
       url:
         'https://images.unsplash.com/photo-1523309996740-d5315f9cc28b?auto=format&fit=crop&w=400&q=80',
       title: 'Gastronomia',
       width: '25%',
-    },
+    }
+  ];
+    const images4 = [
     {
       url:
         'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=400&q=80',
@@ -119,8 +133,14 @@ function ProductCategories(props) {
       <Typography variant="h4" marked="center" align="center" component="h2">
         Compras, pagas y retiras en el momento justo...
       </Typography>
+      
+
+      
+
       <div className={classes.images}>
-        {images.map(image => (
+     
+         {/**Inicio botón farmacia  */}
+        {images1.map(image => (
           <ButtonBase
             key={image.title}
             className={classes.imageWrapper}
@@ -142,13 +162,173 @@ function ProductCategories(props) {
                 color="inherit"
                 className={classes.imageTitle}
               >
+                
                 {image.title}
+                <Link
+              variant="h6"
+              underline="none"
+              className={classes.imageButton}
+              href="/SignUp1"
+             
+            >
+               
+            </Link>
                 <div className={classes.imageMarked} />
+               
               </Typography>
             </div>
           </ButtonBase>
+
+          
         ))}
+      
+      {/**fin Boton farmacia  */}
+
+      {/**Inicio botón supermercado  */}
+      
+
+       
+     
+
+        {images2.map(image => (
+          <ButtonBase
+            key={image.title}
+            className={classes.imageWrapper}
+            style={{
+              width: image.width,
+            }}
+          >
+            <div
+              className={classes.imageSrc}
+              style={{
+                backgroundImage: `url(${image.url})`,
+              }}
+            />
+            <div className={classes.imageBackdrop} />
+            <div className={classes.imageButton}>
+              <Typography
+                component="h3"
+                variant="h6"
+                color="inherit"
+                className={classes.imageTitle}
+              >
+                
+                {image.title}
+                <Link
+              variant="h6"
+              underline="none"
+              className={classes.imageButton}
+              href="/SignUp1"
+             
+            >
+               
+            </Link>
+                <div className={classes.imageMarked} />
+               
+              </Typography>
+            </div>
+          </ButtonBase>
+
+          
+        ))}
+        {/**Fin botón supermercado */}
+
+        {/**Inicio botón gastronomia  */}
+        
+        {images3.map(image => (
+          <ButtonBase
+            key={image.title}
+            className={classes.imageWrapper}
+            style={{
+              width: image.width,
+            }}
+          >
+            <div
+              className={classes.imageSrc}
+              style={{
+                backgroundImage: `url(${image.url})`,
+              }}
+            />
+            <div className={classes.imageBackdrop} />
+            <div className={classes.imageButton}>
+              <Typography
+                component="h3"
+                variant="h6"
+                color="inherit"
+                className={classes.imageTitle}
+              >
+                
+                {image.title}
+                <Link
+              variant="h6"
+              underline="none"
+              className={classes.imageButton}
+              href="/SignUp1"
+             
+            >
+               
+            </Link>
+                <div className={classes.imageMarked} />
+               
+              </Typography>
+            </div>
+          </ButtonBase>
+
+          
+        ))}
+      
+      {/**fin Boton Gastronomía  */}
+
+      {/**Inicio botón tiendas*/}
+ 
+       
+     
+
+        {images4.map(image => (
+          <ButtonBase
+            key={image.title}
+            className={classes.imageWrapper}
+            style={{
+              width: image.width,
+            }}
+          >
+            <div
+              className={classes.imageSrc}
+              style={{
+                backgroundImage: `url(${image.url})`,
+              }}
+            />
+            <div className={classes.imageBackdrop} />
+            <div className={classes.imageButton}>
+              <Typography
+                component="h3"
+                variant="h6"
+                color="inherit"
+                className={classes.imageTitle}
+              >
+                
+                {image.title}
+                <Link
+              variant="h6"
+              underline="none"
+              className={classes.imageButton}
+              href="/SignUp1"
+             
+            >
+               
+            </Link>
+                <div className={classes.imageMarked} />
+               
+              </Typography>
+            </div>
+          </ButtonBase>
+
+          
+        ))}
+        {/**Fin botón tiendas */}
       </div>
+       
+       
     </Container>
   );
 }
