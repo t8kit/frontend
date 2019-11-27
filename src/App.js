@@ -16,7 +16,11 @@ import Navigation from './components/Navigation';
 //import NotesList from './components/NotesList';
 //import Header from './components/Header';
 import SignIn from './components/SignIn/index';
-import SignUp from './components/SignUp/index'
+import SignUp from './components/SignUp/index';
+import ShopsPharmacy from './components/ShopsPharmacy';
+import ShopsSuperMarket from './components/ShopsSuperMarket';
+import ShopsRestaurant from './components/ShopsRestaurant';
+import ShopsShopping from './components/ShopsShopping';
 
 
 
@@ -37,7 +41,7 @@ function App() {
         <Route path="/tiendas-farmacias" exact component={ShopsPharmacy} />
         <Route path="/tiendas-supermercados" exact component={ShopsSuperMarket} />
         <Route path="/tiendas-restaurantes" exact component={ShopsRestaurant} />
-        <Route path="/tiendas-shopping" exact component={SigShopsShoppingnUp} />
+        <Route path="/tiendas-shopping" exact component={ShopsShopping} />
       </div>
     </Router>
   );
