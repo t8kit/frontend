@@ -34,6 +34,10 @@ function App() {
       <div className="container p-4">
         <Route path="/SignIn" exact component={SignIn} />
         <Route path="/SignUp" exact component={SignUp} />
+        <Route path="/tiendas-farmacias" exact component={ShopsPharmacy} />
+        <Route path="/tiendas-supermercados" exact component={ShopsSuperMarket} />
+        <Route path="/tiendas-restaurantes" exact component={ShopsRestaurant} />
+        <Route path="/tiendas-shopping" exact component={SigShopsShoppingnUp} />
       </div>
     </Router>
   );

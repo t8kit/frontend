@@ -168,7 +168,7 @@ function ProductCategories(props) {
               variant="h6"
               underline="none"
               className={classes.imageButton}
-              href="/SignUp1"
+              href="/tiendas-farmacias"
              
             >
                
@@ -218,7 +218,7 @@ function ProductCategories(props) {
               variant="h6"
               underline="none"
               className={classes.imageButton}
-              href="/SignUp1"
+              href="/tiendas-supermercados"
              
             >
                
@@ -263,7 +263,7 @@ function ProductCategories(props) {
               variant="h6"
               underline="none"
               className={classes.imageButton}
-              href="/SignUp1"
+              href="/tiendas-restaurantes"
              
             >
                
@@ -312,7 +312,7 @@ function ProductCategories(props) {
               variant="h6"
               underline="none"
               className={classes.imageButton}
-              href="/SignUp1"
+              href="/tiendas-shopping"
              
             >
                
