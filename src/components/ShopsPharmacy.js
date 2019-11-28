@@ -29,7 +29,7 @@ function Copyright() {
   );
 }
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+//const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 
 //export default function Album() {
@@ -42,10 +42,14 @@ export default class Album extends Component {
 
 
   async componentDidMount() {
-    const res = await axios.get('http://localhost:4000/tiendas-farmacias');
+    const res = await axios.get('http://localhost:4000/tienda');
     this.setState({ shops: res.data });
-    console.log(res)
+    //console.log(res)
+    console.log('***********')
+    console.log(this.state.shops)
+    console.log('***********')
     //console.log(this.state.shops)
+    
   }
 
 
@@ -128,29 +132,28 @@ export default class Album extends Component {
           <Container className={useStyles.cardGrid} maxWidth="md">
             {/* End hero unit */}
             <Grid container spacing={4}>
-              {cards.map(card => (
-                <Grid item key={card} xs={12} sm={6} md={4}>
+              {this.state.shops.map(shop => (
+                <Grid item key={shop._id} xs={12} sm={6} md={4}>
                   <Card className={useStyles.card}>
                     <CardMedia
                       className={useStyles.cardMedia}
-                      image="https://source.unsplash.com/random"
-                      title="Image title"
+                      image="https://alertasdeofertas.com/wp-content/uploads/2019/04/FARMACITY.png"
+                      title={shop.shopname}
                     />
                     <CardContent className={useStyles.cardContent}>
                       <Typography gutterBottom variant="h5" component="h2">
-                        Heading
+                      {shop.shopname}
+                      
                     </Typography>
                       <Typography>
-                        This is a media card. You can use this section to describe the content.
+                        Agreagra ubicacion.
                     </Typography>
                     </CardContent>
                     <CardActions>
                       <Button size="small" color="primary">
-                        View
+                        Ver productos
                     </Button>
-                      <Button size="small" color="primary">
-                        Edit
-                    </Button>
+                    
                     </CardActions>
                   </Card>
                 </Grid>
