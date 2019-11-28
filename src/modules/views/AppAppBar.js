@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
+import TimeIcon from '@material-ui/icons/AccessTime';
 //
 //import { BrowserRouter as Router, Route } from 'react-router-dom'
 
@@ -14,7 +15,8 @@ const styles = theme => ({
   title: {
     fontSize: 24,
   },
-  placeholder: toolbarStyles(theme).root,
+  placeholder:  toolbarStyles(theme).root, 
+  color: theme.palette.common.pink,
   toolbar: {
     justifyContent: 'space-between',
   },
@@ -37,6 +39,9 @@ const styles = theme => ({
   linkSecondary: {
     color: theme.palette.secondary.main,
   },
+  icon: {
+    marginRight: theme.spacing(2)
+  },
 });
 
 function AppAppBar(props) {
@@ -45,7 +50,8 @@ function AppAppBar(props) {
   return (
     <div>
       <AppBar position="fixed">
-        <Toolbar className={classes.toolbar}>
+        <Toolbar className={classes.rightLink}>
+        
           <div className={classes.left} />
           <Link
             variant="h6"
@@ -54,7 +60,8 @@ function AppAppBar(props) {
             className={classes.title}
             href="/"
           >
-            {'T8KIT'}
+            {'T8KIT '}
+            <TimeIcon className={classes.icon} />  
           </Link>
           <div className={classes.right}>
             <Link

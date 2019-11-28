@@ -14,6 +14,7 @@ import ShopsRestaurant from './components/ShopsRestaurant';
 import ShopsShopping from './components/ShopsShopping';
 import Home   from './components/Home';
 import Page404 from './components/Page404';
+import CartShopping from './components/CartShopping/App/index';
 //import App from './App';
 //import App from './App';
 //import App from './App';
@@ -29,6 +30,7 @@ const AppRoutes = () =>
         <Route path = "/tiendas-supermercados" component={ShopsSuperMarket} />
         <Route path = "/tiendas-restaurantes" component={ShopsRestaurant} />
         <Route path = "/tiendas-shopping" component={ShopsShopping} />
+        <Route path = "/farmacia" component={CartShopping} />
         <Route path = "/Home" component={Home} />
         <Route  component={Page404} />
          

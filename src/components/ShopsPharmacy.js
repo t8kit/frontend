@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import AppBar from '@material-ui/core/AppBar';
+//import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
-import CameraIcon from '@material-ui/icons/PhotoCamera';
+//import TimeIcon from '@material-ui/icons/AccessTime';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import Toolbar from '@material-ui/core/Toolbar';
+//import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -49,12 +49,12 @@ export default class Album extends Component {
     console.log(this.state.shops)
     console.log('***********')
     //console.log(this.state.shops)
-    
+
   }
 
 
   render() {
-  
+
 
 
     let useStyles = makeStyles(theme => ({
@@ -93,14 +93,7 @@ export default class Album extends Component {
 
       <React.Fragment>
         <CssBaseline />
-        <AppBar position="relative">
-          <Toolbar>
-            <CameraIcon className={useStyles.icon} />
-            <Typography variant="h6" color="inherit" noWrap>
-            T8KIT
-          </Typography>
-          </Toolbar>
-        </AppBar>
+
         <main>
           {/* Hero unit */}
           <div className={useStyles.heroContent}>
@@ -111,7 +104,7 @@ export default class Album extends Component {
               <Typography variant="h5" align="center" color="textSecondary" paragraph>
                 texto...
             </Typography>
-            {/**
+              {/**
               <div className={useStyles.heroButtons}>
                 <Grid container spacing={2} justify="center">
                   <Grid item>
@@ -137,14 +130,18 @@ export default class Album extends Component {
                   <Card className={useStyles.card}>
                     <CardMedia
                       className={useStyles.cardMedia}
-                      image="https://alertasdeofertas.com/wp-content/uploads/2019/04/FARMACITY.png"
                       title={shop.shopname}
                     />
+                    <div className="ejemplo">
+                      <img src={shop.photo}
+                      alt="tiendas" />
+
+                    </div>
                     <CardContent className={useStyles.cardContent}>
                       <Typography gutterBottom variant="h5" component="h2">
-                      {shop.shopname}
-                      
-                    </Typography>
+                        {shop.shopname}
+
+                      </Typography>
                       <Typography>
                         Agreagra ubicacion.
                     </Typography>
@@ -153,7 +150,7 @@ export default class Album extends Component {
                       <Button size="small" color="primary">
                         Ver productos
                     </Button>
-                    
+
                     </CardActions>
                   </Card>
                 </Grid>
