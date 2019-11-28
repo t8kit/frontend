@@ -29,7 +29,7 @@ function Copyright() {
   );
 }
 
-//const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 
 //export default function Album() {
@@ -44,8 +44,8 @@ export default class Album extends Component {
   async componentDidMount() {
     const res = await axios.get('http://localhost:4000/tiendas-farmacias');
     this.setState({ shops: res.data });
-    //console.log(res)
-    console.log(this.state.shops)
+    console.log(res)
+    //console.log(this.state.shops)
   }
 
 
@@ -128,12 +128,12 @@ export default class Album extends Component {
           <Container className={useStyles.cardGrid} maxWidth="md">
             {/* End hero unit */}
             <Grid container spacing={4}>
-              {this.state.shops.map(card => (
+              {cards.map(card => (
                 <Grid item key={card} xs={12} sm={6} md={4}>
                   <Card className={useStyles.card}>
                     <CardMedia
                       className={useStyles.cardMedia}
-                      image={this.state.shops}
+                      image="https://source.unsplash.com/random"
                       title="Image title"
                     />
                     <CardContent className={useStyles.cardContent}>
