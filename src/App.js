@@ -23,12 +23,7 @@ import ShopsRestaurant from './components/ShopsRestaurant';
 import ShopsShopping from './components/ShopsShopping';
 import CartShopping from './components/CartShopping/CartShopping';
 
-
-
 function App() {
-
-
-
   return (
     <Router>
       <Navigation />

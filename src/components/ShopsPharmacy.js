@@ -110,10 +110,8 @@ export default class ShopsPharmacy extends Component {
                         className={useStyles.cardMedia}
                         title={shop.shopname}
                       />
-                      <div className="ejemplo">
-                        <img src={shop.photo}
-                          alt="tiendas" />
-
+                      <div className="ejemplo" >
+                        <img src={shop.photo} alt="tiendas" width="50%" />
                       </div>
                       <CardContent className={useStyles.cardContent}>
                         <Typography gutterBottom variant="h5" component="h2">

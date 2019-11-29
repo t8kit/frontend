@@ -72,7 +72,7 @@ function SignIn() {
                 component={RFTextField}
                 disabled={submitting || sent}
                 fullWidth
-                label="Email"
+                label="Usuario"
                 margin="normal"
                 name="email"
                 required
@@ -106,14 +106,14 @@ function SignIn() {
                 color="secondary"
                 fullWidth
               >
-                {submitting || sent ? 'In progress…' : 'Sign In'}
+                {submitting || sent ? 'un momento…' : 'Ingresar'}
               </FormButton>
             </form>
           )}
         </Form>
         <Typography align="center">
-          <Link underline="always" href="/premium-themes/onepirate/forgot-password/">
-            Forgot password?
+          <Link className="navbar-brand" to="/" underline="always" href="/premium-themes/onepirate/forgot-password/">
+            Olvidaste tu contraseña?
             </Link>
         </Typography>
       </AppForm>

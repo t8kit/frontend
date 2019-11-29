@@ -109,10 +109,8 @@ export default class ShopsRestaurant extends Component {
                         className={useStyles.cardMedia}
                         title={resto.shopname}
                       />
-                      <div className="ejemplo">
-                        <img src={resto.photo}
-                          alt="tiendas" />
-
+                      <div className="ejemplo" >
+                        <img src={resto.photo} alt="tiendas" width="50%"/>
                       </div>
                       <CardContent className={useStyles.cardContent}>
                         <Typography gutterBottom variant="h5" component="h2">
