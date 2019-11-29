@@ -28,11 +28,11 @@ const AppRoutes = () =>
     <Switch>
         <Route path = "/signIn" component={SignIn} />
         <Route path = "/signUp" component={SignUp} />
-        <Route path = "/tiendas-farmacias" component={ShopsPharmacy} />
-        <Route path = "/tiendas-supermercados" component={ShopsSuperMarket} />
-        <Route path = "/tiendas-restaurantes" component={ShopsRestaurant} />
-        <Route path = "/tiendas-shopping" component={ShopsShopping} />
-        <Route path = "/farmacia" component={CartShopping} />
+        <Route path = "/ShopsPharmacy" component={ShopsPharmacy} />
+        <Route path = "/ShopsSuperMarket" component={ShopsSuperMarket} />
+        <Route path = "/ShopsRestaurant" component={ShopsRestaurant} />
+        <Route path = "/ShopsShopping" component={ShopsShopping} />
+        <Route path = "/ShopProducts" component={CartShopping} />
         <Route path = "/Home" component={Home} />
         <Route  component={Page404} />
          

@@ -18,8 +18,8 @@ import axios from 'axios';
 
 
 
-//export default function Album() {
-export default class Album extends Component {
+ 
+export default class ShopsPharmacy extends Component {
 
 
   state = {
@@ -28,7 +28,7 @@ export default class Album extends Component {
 
 
   async componentDidMount() {
-    const res = await axios.get('http://localhost:4000/tienda');
+    const res = await axios.get('http://localhost:4000/ShopsPharmacy');
     this.setState({ shops: res.data });
     //console.log(res)
     console.log('***********')
@@ -120,15 +120,15 @@ export default class Album extends Component {
                           {shop.shopname}
 
                         </Typography>
-                        <Typography>
-                          Agreagra ubicacion.
+                        <Typography gutterBottom variant="h5" component="h2">
+                        {shop.adrress}
                     </Typography>
                       </CardContent>
                       <CardActions>
                         <Button size="small" color="primary">
                           <Link
                             className="ver productos de tienda"
-                            href="/ShopPharmacy"
+                            href="/ShopProducts"
 
                           >
                             {'Ver productos'}

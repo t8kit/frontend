@@ -38,7 +38,6 @@ export default class ShopsRestaurant extends Component {
 
   }
 
-
   render() {
 
 
@@ -120,7 +119,7 @@ export default class ShopsRestaurant extends Component {
                           {resto.shopname}
 
                         </Typography>
-                        <Typography> gutterBottom variant="h5" component="h2">
+                        <Typography gutterBottom variant="h5" component="h2">
                           {resto.adrress}
                     </Typography>
                       </CardContent>
@@ -128,7 +127,7 @@ export default class ShopsRestaurant extends Component {
                         <Button size="small" color="primary">
                           <Link
                             className="ver productos de tienda"
-                            href="/ShopRestaurant"
+                            href="/ShopProducts"
 
                           >
                             {'Ver productos'}
