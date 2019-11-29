@@ -47,7 +47,7 @@ export default class CreateNote extends Component {
 
     console.log(e.target.value);
     
-    axios.post('http://localhost:4000/usuario', newUser);
+    axios.post('http://localhost:4000/user', newUser);
 
 
 
