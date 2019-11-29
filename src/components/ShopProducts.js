@@ -18,25 +18,26 @@ import axios from 'axios';
 
 
 
-//export default function Album() {
-export default class ShopsRestaurant extends Component {
+ 
+export default class SShopProducts extends Component {
 
 
   state = {
-    restos: []
+    shops: []
   }
 
 
   async componentDidMount() {
-    const res = await axios.get('http://localhost:4000/ShopsRestaurant');
-    this.setState({ restos: res.data });
-    
+    const res = await axios.get('http://localhost:4000/ShopProducts');
+    this.setState({ shops: res.data });
+    //console.log(res)
     console.log('***********')
-    console.log(this.state.restos)
+    console.log(this.state.shops)
     console.log('***********')
-    
+    //console.log(this.state.shops)
 
   }
+
 
   render() {
 
@@ -91,7 +92,7 @@ export default class ShopsRestaurant extends Component {
           <Toolbar>
             <TimeIcon className={useStyles.icon} />
             <Typography variant="h6" color="inherit" noWrap>
-              Restaurant
+              Productos
           </Typography>
           </Toolbar>
         </AppBar>
@@ -102,33 +103,35 @@ export default class ShopsRestaurant extends Component {
             <Container className={useStyles.cardGrid} maxWidth="md">
               {/* ** */}
               <Grid container spacing={4}>
-                {this.state.restos.map(resto => (
-                  <Grid item key={resto._id} xs={12} sm={6} md={4}>
+                {this.state.shops.map(shop => (
+                  <Grid item key={shop._id} xs={12} sm={6} md={4}>
                     <Card className={useStyles.card}>
                       <CardMedia
                         className={useStyles.cardMedia}
-                        title={resto.shopname}
+                        title={shop.shopname}
                       />
-                      <div className="ejemplo" >
-                        <img src={resto.photo} alt="tiendas" width="50%"/>
+                      <div className="ejemplo">
+                        <img src={shop.photo}
+                          alt="tiendas" />
+
                       </div>
                       <CardContent className={useStyles.cardContent}>
                         <Typography gutterBottom variant="h5" component="h2">
-                          {resto.shopname}
+                          {shop.shopname}
 
                         </Typography>
                         <Typography gutterBottom variant="h5" component="h2">
-                          {resto.adrress}
+                        {shop.adrress}
                     </Typography>
                       </CardContent>
                       <CardActions>
                         <Button size="small" color="primary">
                           <Link
                             className="ver productos de tienda"
-                            href="/ShopProductsOther"
+                            href="/ShopProducts"
 
                           >
-                            {'Ver productos'}
+                            {'Agregar al carrito'}
                           </Link>
 
                         </Button>
