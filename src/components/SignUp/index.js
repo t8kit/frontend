@@ -79,7 +79,7 @@ export default class CreateNote extends Component {
     console.log(this.state.email);
     console.log(this.state.pass);
 
-    const res = await axios.post('http://localhost:4000/usuario', {
+    const res = await axios.post('http://localhost:4000/user', {
 
       username: this.state.username,
       email: this.state.email,
