@@ -21,7 +21,8 @@ import ShopsPharmacy from './components/ShopsPharmacy';
 import ShopsSuperMarket from './components/ShopsSuperMarket';
 import ShopsRestaurant from './components/ShopsRestaurant';
 import ShopsShopping from './components/ShopsShopping';
-import CartShopping from './components/CartShopping/CartShopping';
+//import CartShopping from './components/CartShopping/CartShopping';
+import ShopProducts from './components/ShopProducts';
 
 
 
@@ -43,7 +44,7 @@ function App() {
         <Route path="/ShopsSuperMarket" exact component={ShopsSuperMarket} />
         <Route path="/ShopsRestaurant" exact component={ShopsRestaurant} />
         <Route path="/ShopsShopping" exact component={ShopsShopping} />
-        <Route path="/ShopProducts" exact component={CartShopping} />
+        <Route path="/ShopProducts" exact component={ShopProducts} />
       </div>
     </Router>
   );

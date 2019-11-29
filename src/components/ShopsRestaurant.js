@@ -91,7 +91,7 @@ export default class ShopsRestaurant extends Component {
           <Toolbar>
             <TimeIcon className={useStyles.icon} />
             <Typography variant="h6" color="inherit" noWrap>
-              Farmacias
+              Restaurant
           </Typography>
           </Toolbar>
         </AppBar>
@@ -127,7 +127,7 @@ export default class ShopsRestaurant extends Component {
                         <Button size="small" color="primary">
                           <Link
                             className="ver productos de tienda"
-                            href="/ShopProducts"
+                            href="/ShopProductsOther"
 
                           >
                             {'Ver productos'}
