@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Route , Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 //Componentes
 
@@ -15,6 +16,7 @@ import ShopsShopping from './components/ShopsShopping';
 import Home   from './components/Home';
 import Page404 from './components/Page404';
 import CartShopping from './components/CartShopping/App/index';
+import store from '../../services/store';
 //import App from './App';
 //import App from './App';
 //import App from './App';
@@ -35,6 +37,10 @@ const AppRoutes = () =>
         <Route  component={Page404} />
          
     </Switch>
+    const Root = ({ children, initialState = {} }) => (
+  <Provider store={store(initialState)}>{children}</Provider>
+);
+
  </App>   
  
  export default AppRoutes;

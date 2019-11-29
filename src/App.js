@@ -21,7 +21,7 @@ import ShopsPharmacy from './components/ShopsPharmacy';
 import ShopsSuperMarket from './components/ShopsSuperMarket';
 import ShopsRestaurant from './components/ShopsRestaurant';
 import ShopsShopping from './components/ShopsShopping';
-import CartShopping from './components/CartShopping/App/index';
+import CartShopping from './components/CartShopping/CartShopping';
 
 
 
