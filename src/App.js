@@ -39,11 +39,11 @@ function App() {
       <div className="container p-4">
         <Route path="/SignIn" exact component={SignIn} />
         <Route path="/SignUp" exact component={SignUp} />
-        <Route path="/tiendas-farmacias" exact component={ShopsPharmacy} />
-        <Route path="/tiendas-supermercados" exact component={ShopsSuperMarket} />
-        <Route path="/tiendas-restaurantes" exact component={ShopsRestaurant} />
-        <Route path="/tiendas-shopping" exact component={ShopsShopping} />
-        <Route path="/farmacia" exact component={CartShopping} />
+        <Route path="/ShopsPharmacy" exact component={ShopsPharmacy} />
+        <Route path="/ShopsSuperMarket" exact component={ShopsSuperMarket} />
+        <Route path="/ShopsRestaurant" exact component={ShopsRestaurant} />
+        <Route path="/ShopsShopping" exact component={ShopsShopping} />
+        <Route path="/ShopProducts" exact component={CartShopping} />
       </div>
     </Router>
   );
