@@ -133,10 +133,6 @@ function ProductCategories(props) {
       <Typography variant="h4" marked="center" align="center" component="h2">
         Compras, pagas y retiras en el momento justo...
       </Typography>
-      
-
-      
-
       <div className={classes.images}>
      
          {/**Inicio botón farmacia  */}
@@ -162,19 +158,14 @@ function ProductCategories(props) {
                 color="inherit"
                 className={classes.imageTitle}
               >
-                
-                {image.title}
-                <Link
-              variant="h6"
-              underline="none"
-              className={classes.imageButton}
-              href="/ShopsPharmacy"
-             
-            >
-               
-            </Link>
-                <div className={classes.imageMarked} />
-               
+                <Link 
+                variant="h6"
+                underline="none"
+                className={classes.imageButton}
+                href="/ShopsPharmacy">
+                    {image.title}
+                </Link>
+                <div className={classes.imageMarked} /> 
               </Typography>
             </div>
           </ButtonBase>
@@ -185,11 +176,6 @@ function ProductCategories(props) {
       {/**fin Boton farmacia  */}
 
       {/**Inicio botón supermercado  */}
-      
-
-       
-     
-
         {images2.map(image => (
           <ButtonBase
             key={image.title}
@@ -212,8 +198,6 @@ function ProductCategories(props) {
                 color="inherit"
                 className={classes.imageTitle}
               >
-                
-                {image.title}
                 <Link
               variant="h6"
               underline="none"
@@ -221,7 +205,7 @@ function ProductCategories(props) {
               href="/ShopsSuperMarket"
              
             >
-               
+               {image.title}
             </Link>
                 <div className={classes.imageMarked} />
                
@@ -256,18 +240,14 @@ function ProductCategories(props) {
                 variant="h6"
                 color="inherit"
                 className={classes.imageTitle}
-              >
-                
-                {image.title}
+              > 
                 <Link
-              variant="h6"
-              underline="none"
-              className={classes.imageButton}
-              href="/ShopsRestaurant"
-             
-            >
-               
-            </Link>
+                variant="h6"
+                underline="none"
+                className={classes.imageButton}
+                href="/ShopsRestaurant">
+                {image.title}
+                </Link>
                 <div className={classes.imageMarked} />
                
               </Typography>
@@ -280,11 +260,7 @@ function ProductCategories(props) {
       {/**fin Boton Gastronomía  */}
 
       {/**Inicio botón tiendas*/}
- 
-       
-     
-
-        {images4.map(image => (
+         {images4.map(image => (
           <ButtonBase
             key={image.title}
             className={classes.imageWrapper}
@@ -306,16 +282,13 @@ function ProductCategories(props) {
                 color="inherit"
                 className={classes.imageTitle}
               >
-                
-                {image.title}
-                <Link
+              <Link
               variant="h6"
               underline="none"
               className={classes.imageButton}
               href="/ShopsShopping"
-             
-            >
-               
+             >
+             {image.title}  
             </Link>
                 <div className={classes.imageMarked} />
                

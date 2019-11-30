@@ -19,7 +19,7 @@ import axios from 'axios';
 
 
  
-export default class ShopsShopping extends Component {
+export default class SShopProducts extends Component {
 
 
   state = {
@@ -28,7 +28,7 @@ export default class ShopsShopping extends Component {
 
 
   async componentDidMount() {
-    const res = await axios.get('http://localhost:4000/ShopsShopping');
+    const res = await axios.get('http://localhost:4000/ShopProducts');
     this.setState({ shops: res.data });
     //console.log(res)
     console.log('***********')
@@ -92,7 +92,7 @@ export default class ShopsShopping extends Component {
           <Toolbar>
             <TimeIcon className={useStyles.icon} />
             <Typography variant="h6" color="inherit" noWrap>
-              Shopping
+              Productos
           </Typography>
           </Toolbar>
         </AppBar>
@@ -110,8 +110,10 @@ export default class ShopsShopping extends Component {
                         className={useStyles.cardMedia}
                         title={shop.shopname}
                       />
-                      <div className="ejemplo" >
-                        <img src={shop.photo} alt="tiendas" width="50%"/>
+                      <div className="ejemplo">
+                        <img src={shop.photo}
+                          alt="tiendas" />
+
                       </div>
                       <CardContent className={useStyles.cardContent}>
                         <Typography gutterBottom variant="h5" component="h2">
@@ -129,7 +131,7 @@ export default class ShopsShopping extends Component {
                             href="/ShopProducts"
 
                           >
-                            {'Ver productos'}
+                            {'Agregar al carrito'}
                           </Link>
 
                         </Button>
