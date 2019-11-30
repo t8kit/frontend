@@ -112,7 +112,7 @@ export default class ShopsSuperMarket extends Component {
                       />
                       <div className="ejemplo">
                         <img src={shop.photo}
-                          alt="tiendas" />
+                          alt="tiendas" width="50%" />
 
                       </div>
                       <CardContent className={useStyles.cardContent}>

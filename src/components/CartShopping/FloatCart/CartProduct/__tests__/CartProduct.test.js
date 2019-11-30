@@ -3,7 +3,7 @@ import CartProduct from '../';
 const productMock = {
   id: 13,
   sku: 51498472915966366,
-  title: 'Dark Thug Blue-Navy T-Shirt',
+  title: 'Dark Thug Blue-Navy ',
   description: '',
   availableSizes: ['M'],
   style: 'Front print and paisley print',

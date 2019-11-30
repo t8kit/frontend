@@ -10,7 +10,7 @@ const initialState = {
       {
         id: 12,
         sku: 12064273040195392,
-        title: 'Cat Tee Black T-Shirt',
+        title: 'Remera Cat Tee Black',
         description: '4 MSL',
         availableSizes: ['S', 'XS'],
         style: 'Black with custom print',
@@ -23,7 +23,7 @@ const initialState = {
       {
         id: 13,
         sku: 51498472915966366,
-        title: 'Dark Thug Blue-Navy T-Shirt',
+        title: 'Dark Thug Blue-Navy ',
         description: '',
         availableSizes: ['M'],
         style: 'Front print and paisley print',

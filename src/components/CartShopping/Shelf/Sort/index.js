@@ -7,13 +7,13 @@ import Selectbox from '../../Selectbox';
 
 const sortBy = [
   { value: '', label: 'Select' },
-  { value: 'lowestprice', label: 'Lowest to highest' },
-  { value: 'highestprice', label: 'Highest to lowest' }
+  { value: 'lowestprice', label: 'Menor a Mayor' },
+  { value: 'highestprice', label: 'Mayor a Menor' }
 ];
 
 const Sort = ({ updateSort, sort }) => (
   <div className="sort">
-    Order by
+    Ordena por
     <Selectbox options={sortBy} handleOnChange={value => updateSort(value)} />
   </div>
 );

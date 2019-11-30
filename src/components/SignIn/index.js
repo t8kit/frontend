@@ -1,9 +1,10 @@
 //Dependecias
 
-//import React, { Component } from 'react';
-import React from 'react';
+import React, { Component } from 'react';
+//import ReactDOM from 'react-dom';
+//import React from 'react';
 //import AppAppBar from '../../modules/views/AppAppBar';
-import AppForm from '../../modules/views/AppForm';
+//import AppForm from '../../modules/views/AppForm';
 import Typography from '../../modules/components/Typography';
 import { Link } from 'react-router-dom';
 import FormButton from '../../modules/form/FormButton';
@@ -12,6 +13,7 @@ import { Field, Form, FormSpy } from 'react-final-form';
 import { makeStyles } from '@material-ui/core/styles';
 import RFTextField from '../../modules/form/RFTextField';
 import { email, required } from '../../modules/form/validator';
+import './Style.css';
 
 
 const useStyles = makeStyles(theme => ({
@@ -25,19 +27,23 @@ const useStyles = makeStyles(theme => ({
   feedback: {
     marginTop: theme.spacing(2),
   },
+  
 }));
 
 function SignIn() {
   const classes = useStyles();
   const [sent, setSent] = React.useState(false);
+  
 
   const validate = values => {
     const errors = required(['email', 'password'], values);
 
     if (!errors.email) {
       const emailError = email(values.email, values);
+      
       if (emailError) {
         errors.email = email(values.email, values);
+        
       }
     }
 
@@ -46,13 +52,17 @@ function SignIn() {
 
   const handleSubmit = () => {
     setSent(true);
-  };
+    };
+
+    
 
   return (
     <React.Fragment>
 
-      <AppForm>
-        <React.Fragment>
+<div className="card card-body" weidth="200%">
+      
+      <React.Fragment>
+        
           <Typography variant="h3" gutterBottom marked="center" align="center">
             Ingresar
             </Typography>
@@ -99,15 +109,21 @@ function SignIn() {
                   ) : null
                 }
               </FormSpy>
+              
               <FormButton
                 className={classes.button}
                 disabled={submitting || sent}
                 size="large"
-                color="secondary"
+                color=""
                 fullWidth
               >
-                {submitting || sent ? 'In progress…' : 'Sign In'}
+                 
+                {submitting || sent ? 'Un momento…' : 'Sign In' }
+                
               </FormButton>
+              <Link href='../../App.js'>
+              </Link>
+              
             </form>
           )}
         </Form>
@@ -115,9 +131,8 @@ function SignIn() {
           <Link underline="always" href="/premium-themes/onepirate/forgot-password/">
             Forgot password?
             </Link>
-        </Typography>
-      </AppForm>
-
+              </Typography>
+      </div>
     </React.Fragment>
   );
 }

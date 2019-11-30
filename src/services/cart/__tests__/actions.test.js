@@ -4,7 +4,7 @@ import * as types from '../actionTypes';
 const mockProduct = {
   id: 12,
   sku: 12064273040195392,
-  title: 'Cat Tee Black T-Shirt',
+  title: 'Remera Cat Tee Black',
   description: '4 MSL',
   availableSizes: ['S', 'XS'],
   style: 'Black with custom print',
